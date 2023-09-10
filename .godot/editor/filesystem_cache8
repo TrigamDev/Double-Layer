@@ -1,0 +1,47 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1694319350
+icon.svg::CompressedTexture2D::1220832667463622336::1694308874::1694308890::1::::<><>::
+::res://assets/::1694315402
+::res://assets/sounds/::1694319037
+Menu Move.wav::AudioStreamWAV::6085438017670349738::1577981136::1694319037::1::::<><>::
+Menu Select.wav::AudioStreamWAV::6352742620103558773::1577981136::1694319037::1::::<><>::
+Pause.wav::AudioStreamWAV::8691931642139706639::1577981136::1694319037::1::::<><>::
+Unpause.wav::AudioStreamWAV::7745007070244106424::1577981136::1694319037::1::::<><>::
+::res://assets/sounds/music/::1694319097
+Buster Bee.mp3::AudioStreamMP3::1674730301996861329::1694317750::1694319097::1::::<><>::
+Factory Busters.mp3::AudioStreamMP3::1391897626393373012::1694317654::1694319097::1::::<><>::
+Fog Forest (Final Version ).mp3::AudioStreamMP3::5415373048308429762::1694317912::1694319097::1::::<><>::
+Freaky Factory.mp3::AudioStreamMP3::4173317263890634713::1694317830::1694319097::1::::<><>::
+Harder Bee.mp3::AudioStreamMP3::5595203994889263292::1694317725::1694319097::1::::<><>::
+Library.mp3::AudioStreamMP3::5657908347657164050::1694317608::1694319097::1::::<><>::
+Moronic March.mp3::AudioStreamMP3::6524589139115820030::1694317859::1694319097::1::::<><>::
+Omega.mp3::AudioStreamMP3::6864377270284867672::1694317806::1694319097::1::::<><>::
+Political Pummel.mp3::AudioStreamMP3::4540704902803140009::1694317883::1694319097::1::::<><>::
+[Victory] The More You Grow.mp3::AudioStreamMP3::8276550214628366429::1694317678::1694319097::1::::<><>::
+::res://assets/textures/::1694319073
+::res://assets/textures/backgrounds/::1694317334
+GrassBackground.png::CompressedTexture2D::2546545319637159470::1577981138::1694317334::1::::<><>::
+::res://assets/textures/effects/::1694319036
+GrassEffect.png::CompressedTexture2D::964286239391745786::1577981136::1694319036::1::::<><>::
+::res://assets/textures/entities/::1694319098
+LargeShadow.png::CompressedTexture2D::8354890656012700024::1583868768::1694319097::1::::<><>::
+MediumShadow.png::CompressedTexture2D::7409436194107405143::1577981136::1694319098::1::::<><>::
+Player.png::CompressedTexture2D::6148308477570381186::1583870130::1694319098::1::::<><>::
+SmallShadow.png::CompressedTexture2D::3956975988773443923::1577981138::1694319098::1::::<><>::
+::res://assets/textures/gui/::1694319098
+HeartUIEmpty.png::CompressedTexture2D::8782175841608242951::1582900728::1694319098::1::::<><>::
+HeartUIFull.png::CompressedTexture2D::8358364898662374356::1582900712::1694319098::1::::<><>::
+::res://assets/textures/props/::1694317334
+Bush.png::CompressedTexture2D::6600734771009333736::1577981138::1694317334::1::::<><>::
+Grass.png::CompressedTexture2D::1942935257176641966::1577981138::1694317334::1::::<><>::
+Tree.png::CompressedTexture2D::2120524684602352980::1577981138::1694317334::1::::<><>::
+::res://assets/textures/tilesets/::1694317334
+CliffTileset.png::CompressedTexture2D::2152314396711383181::1582665880::1694317334::1::::<><>::
+DirtTileset.png::CompressedTexture2D::1598975405092993924::1582727818::1694317334::1::::<><>::
+::res://scenes/::1694319210
+::res://scenes/entities/::1694319206
+::res://scenes/menus/::1694319201
+::res://scenes/props/::1694319210
+::res://scenes/worlds/::1694319272
+dev_world.tscn::PackedScene::2651866060806179066::1694319272::0::1::::<><>::
+::res://scripts/::1694311089

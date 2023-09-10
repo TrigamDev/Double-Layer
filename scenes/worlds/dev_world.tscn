@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd1t31v68x0fe"]
+
+[ext_resource type="PackedScene" uid="uid://dmndr1yld65fl" path="res://scenes/entities/dewon.tscn" id="1_a2q5a"]
+
+[node name="Dev World" type="Node2D"]
+
+[node name="Entities" type="Node" parent="."]
+
+[node name="Dewon" parent="Entities" instance=ExtResource("1_a2q5a")]
+position = Vector2(412, 303)
+
+[node name="Props" type="Node" parent="."]
+
+[node name="World" type="Node" parent="."]
