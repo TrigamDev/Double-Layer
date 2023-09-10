@@ -1,3 +1,4 @@
 res://scenes/worlds/dev_world.tscn
+res://assets/tilesets/cliffs.tres
+res://assets/tilesets/dirt.tres
 res://scenes/entities/dewon.tscn
-res://scripts/scripts/entities/player.gd

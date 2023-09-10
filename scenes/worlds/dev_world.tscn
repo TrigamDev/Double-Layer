@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bd1t31v68x0fe"]
+[gd_scene load_steps=4 format=3 uid="uid://bd1t31v68x0fe"]
 
 [ext_resource type="PackedScene" uid="uid://dmndr1yld65fl" path="res://scenes/entities/dewon.tscn" id="1_a2q5a"]
+[ext_resource type="TileSet" uid="uid://d37s4kcmlac6q" path="res://assets/tilesets/dirt.tres" id="2_mdawl"]
+[ext_resource type="TileSet" uid="uid://bgrwnat0rvtob" path="res://assets/tilesets/cliffs.tres" id="2_po8po"]
 
 [node name="Dev World" type="Node2D"]
 
@@ -12,3 +14,18 @@ position = Vector2(412, 303)
 [node name="Props" type="Node" parent="."]
 
 [node name="World" type="Node" parent="."]
+
+[node name="Dirt" type="TileMap" parent="World"]
+scale = Vector2(5, 5)
+tile_set = ExtResource("2_mdawl")
+format = 2
+layer_0/name = "cliffs"
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1, 131072, 0, 1, 196608, 0, 2, 131073, 131072, 1, 65537, 131072, 1, 1, 131072, 0, 196609, 131072, 2, 196616, 0, 2, 131080, 0, 1, 65544, 0, 1, 9, 131072, 0, 65545, 131072, 1, 8, 0, 0, 131081, 131072, 1, 196617, 131072, 2, 196622, 0, 2, 131086, 0, 1, 65550, 0, 1, 14, 0, 0, 15, 131072, 0, 65551, 131072, 1, 131087, 131072, 1, 196623, 131072, 2, 720896, 0, 2, 655360, 0, 1, 589824, 0, 1, 524288, 0, 0, 524289, 131072, 0, 589825, 131072, 1, 655361, 131072, 1, 720897, 131072, 2, 720900, 0, 2, 655364, 0, 1, 589828, 0, 1, 524292, 0, 0, 524293, 131072, 0, 589829, 131072, 1, 655365, 131072, 1, 720901, 131072, 2, 720904, 0, 2, 655368, 0, 1, 589832, 0, 1, 524296, 0, 0, 524297, 131072, 0, 589833, 131072, 1, 655369, 131072, 1, 720905, 131072, 2, 720908, 0, 2, 720909, 65536, 2, 720910, 65536, 2, 720911, 65536, 2, 720912, 65536, 2, 720913, 131072, 2, 655377, 131072, 0, 655376, 65536, 0, 655375, 65536, 0, 655374, 65536, 0, 655373, 65536, 0, 655372, 0, 0)
+
+[node name="Cliffs" type="TileMap" parent="World"]
+scale = Vector2(5, 5)
+tile_set = ExtResource("2_po8po")
+cell_quadrant_size = 32
+format = 2
+layer_0/name = "cliffs"
+layer_0/tile_data = PackedInt32Array(0, 196608, 0, 65536, 196608, 2, 4, 196608, 0, 65540, 196608, 2, 7, 196608, 0, 65543, 196608, 2, 262144, 196608, 0, 327680, 196608, 2, 262146, 196608, 0, 327682, 196608, 2, 262148, 196608, 0, 327684, 196608, 2, 327686, 0, 3, 327687, 65536, 3, 327688, 131072, 3)

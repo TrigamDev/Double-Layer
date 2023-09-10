@@ -1,6 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1694319350
+::res://::1694325321
 icon.svg::CompressedTexture2D::1220832667463622336::1694308874::1694308890::1::::<><>::
+README.md::TextFile::-1::1694323631::0::1::::<><>::
 ::res://assets/::1694315402
 ::res://assets/sounds/::1694319037
 Menu Move.wav::AudioStreamWAV::6085438017670349738::1577981136::1694319037::1::::<><>::
@@ -39,9 +40,13 @@ Tree.png::CompressedTexture2D::2120524684602352980::1577981138::1694317334::1:::
 CliffTileset.png::CompressedTexture2D::2152314396711383181::1582665880::1694317334::1::::<><>::
 DirtTileset.png::CompressedTexture2D::1598975405092993924::1582727818::1694317334::1::::<><>::
 ::res://scenes/::1694319210
-::res://scenes/entities/::1694319206
+::res://scenes/entities/::1694321863
+dewon.tscn::PackedScene::8028578998200613173::1694321863::0::1::::<><>::uid://ctuj0ifgk1xbu::::res://assets/textures/entities/Player.png<>res://scripts/scripts/entities/player.gd
 ::res://scenes/menus/::1694319201
 ::res://scenes/props/::1694319210
-::res://scenes/worlds/::1694319272
-dev_world.tscn::PackedScene::2651866060806179066::1694319272::0::1::::<><>::
-::res://scripts/::1694311089
+::res://scenes/worlds/::1694321863
+dev_world.tscn::PackedScene::2651866060806179066::1694321863::0::1::::<><>::uid://dmndr1yld65fl::::res://scenes/entities/dewon.tscn
+::res://scripts/::1694320977
+::res://scripts/scripts/::1694320981
+::res://scripts/scripts/entities/::1694321862
+player.gd::GDScript::-1::1694321862::0::1::::<>CharacterBody2D<>::
