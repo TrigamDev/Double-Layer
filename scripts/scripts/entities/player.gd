@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var move_speed = 300
 @export var run_speed = 450
+@export var acceleration = 3500
 
 enum move_state {
 	IDLE, WALK, RUN, ROLL
@@ -17,10 +18,11 @@ func _physics_process(delta):
 	direction = direction.normalized()
 	set_animation(direction)
 	# Move
-	var movement = move_speed * direction * delta
-	move_and_collide(movement)
+	#var movement = move_speed * direction * delta
+	velocity = velocity.move_toward(direction * move_speed, acceleration * delta)
+	move_and_slide()
 	# Calculate movement state
-	if (movement.length() <= 0): movement_state = move_state.IDLE
+	if (velocity.length() <= 0): movement_state = move_state.IDLE
 	else: movement_state = move_state.WALK
 
 func set_animation(direction: Vector2):

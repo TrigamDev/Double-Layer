@@ -1,5 +1,7 @@
-TileMap
 Node
+Camera2D
+TextureRect
+TileMap
 CollisionShape2D
 AnimatedSprite2D
 CharacterBody2D
