@@ -1,7 +1,10 @@
+AnimatedSprite2D
 Node
+WorldEnvironment
+CollisionShape2D
+Area2D
+StaticBody2D
 Camera2D
 TextureRect
 TileMap
-CollisionShape2D
-AnimatedSprite2D
 CharacterBody2D

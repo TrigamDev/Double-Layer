@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd1t31v68x0fe"]
+[gd_scene load_steps=5 format=3 uid="uid://bd1t31v68x0fe"]
 
 [ext_resource type="PackedScene" uid="uid://dmndr1yld65fl" path="res://scenes/entities/dewon.tscn" id="1_a2q5a"]
 [ext_resource type="TileSet" uid="uid://bgrwnat0rvtob" path="res://assets/tilesets/terrain.tres" id="2_5g5vr"]
-[ext_resource type="Texture2D" uid="uid://bcjth2e0l8ecc" path="res://assets/textures/backgrounds/GrassBackground.png" id="4_68jfn"]
+[ext_resource type="Texture2D" uid="uid://bcjth2e0l8ecc" path="res://assets/textures/backgrounds/grass.png" id="3_u8yo7"]
+[ext_resource type="PackedScene" uid="uid://cu72etg4bqbj2" path="res://scenes/props/buildings/sans_shop.tscn" id="4_7k358"]
 
 [node name="Dev World" type="Node2D"]
 y_sort_enabled = true
@@ -37,12 +38,16 @@ layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(4, 196608, 0, 65540, 196608, 2, 7, 196608, 0, 65543, 196608, 2, 262144, 196608, 0, 327680, 196608, 2, 262146, 196608, 0, 327682, 196608, 2, 262148, 196608, 0, 327684, 196608, 2, 327686, 0, 3, 327687, 65536, 3, 327688, 131072, 3, 0, 196608, 0, 65536, 196608, 2)
 
+[node name="sans_shop" parent="." instance=ExtResource("4_7k358")]
+position = Vector2(-841, -237)
+scale = Vector2(3.5, 3.5)
+
 [node name="GrassBackground" type="Sprite2D" parent="."]
 z_index = -2
 texture_repeat = 2
 position = Vector2(-1920, -1080)
 scale = Vector2(4, 4)
-texture = ExtResource("4_68jfn")
+texture = ExtResource("3_u8yo7")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 960, 540)

@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://cu72etg4bqbj2"]
+
+[ext_resource type="Texture2D" uid="uid://ehq3h3g101lt" path="res://assets/textures/props/buildings/sans.png" id="1_6ben4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57bad"]
+size = Vector2(142, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wiiai"]
+size = Vector2(44, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ruty5"]
+size = Vector2(18, 53)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_24bo1"]
+radius = 8.0
+height = 24.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnj5j"]
+size = Vector2(38, 20)
+
+[node name="sans_shop" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sans" type="Sprite2D" parent="."]
+position = Vector2(106, 140)
+texture = ExtResource("1_6ben4")
+centered = false
+offset = Vector2(-106, -140)
+
+[node name="ColLeft" type="CollisionShape2D" parent="."]
+position = Vector2(75, 129.5)
+shape = SubResource("RectangleShape2D_57bad")
+
+[node name="ColDoorway" type="CollisionShape2D" parent="."]
+position = Vector2(168, 128.5)
+shape = SubResource("RectangleShape2D_wiiai")
+
+[node name="ColRight" type="CollisionShape2D" parent="."]
+position = Vector2(199, 129.5)
+shape = SubResource("RectangleShape2D_ruty5")
+
+[node name="ColPot" type="CollisionShape2D" parent="."]
+position = Vector2(125, 156)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_24bo1")
+
+[node name="InteractBox" type="Area2D" parent="."]
+
+[node name="Coll" type="CollisionShape2D" parent="InteractBox"]
+position = Vector2(168, 154)
+shape = SubResource("RectangleShape2D_tnj5j")
+debug_color = Color(0.25098, 1, 0.25098, 0.419608)

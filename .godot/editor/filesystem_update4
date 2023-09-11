@@ -1,3 +1,4 @@
 res://scenes/worlds/dev_world.tscn
 res://assets/tilesets/terrain.tres
 res://scenes/entities/dewon.tscn
+res://scenes/props/buildings/sans_shop.tscn
