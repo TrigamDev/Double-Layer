@@ -10,6 +10,8 @@ enum move_state {
 var movement_state: move_state = move_state.IDLE
 
 func _physics_process(delta):
+	#self.global_position.x = round(self.global_position.x)
+	#self.global_position.y = round(self.global_position.y)
 	# Get input
 	var direction: Vector2
 	direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
