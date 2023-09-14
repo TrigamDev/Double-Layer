@@ -187,12 +187,11 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_676dk"]
-radius = 2.75
-height = 12.5
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nj7jx"]
+size = Vector2(3.81356, 18)
 
 [node name="Dewon" type="CharacterBody2D"]
-scale = Vector2(3, 3)
+collision_layer = 2
 script = ExtResource("1_t4us7")
 
 [node name="Sprites" type="AnimatedSprite2D" parent="."]
@@ -200,12 +199,21 @@ sprite_frames = SubResource("SpriteFrames_jgqhs")
 animation = &"idle_down"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 10)
+position = Vector2(-2.563e-06, 13.5)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_676dk")
+scale = Vector2(0.786667, 1)
+shape = SubResource("RectangleShape2D_nj7jx")
 
 [node name="Shadow" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(0, 13)
-scale = Vector2(1.175, 1.175)
+scale = Vector2(1.25, 1.25)
 texture = ExtResource("3_lk0l2")
+
+[node name="Interact" type="RayCast2D" parent="."]
+position = Vector2(0, 13)
+scale = Vector2(1.25, 1.25)
+target_position = Vector2(0, 20)
+collision_mask = 6
+hit_from_inside = true
+collide_with_areas = true

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ehq3h3g101lt"
-path="res://.godot/imported/sans.png-856ba1a32309d4315160d34920abbd5b.ctex"
+uid="uid://cc1sb70oydmd"
+path="res://.godot/imported/counter.png-6354e36b4c4441cc33071e9487f0f91f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/props/buildings/sans.png"
-dest_files=["res://.godot/imported/sans.png-856ba1a32309d4315160d34920abbd5b.ctex"]
+source_file="res://assets/textures/props/buildings/sans/counter.png"
+dest_files=["res://.godot/imported/counter.png-6354e36b4c4441cc33071e9487f0f91f.ctex"]
 
 [params]
 

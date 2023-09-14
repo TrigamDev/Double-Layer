@@ -1,5 +1,11 @@
-res://scenes/worlds/dev_world.tscn
-res://assets/tilesets/terrain.tres
+res://scenes/scene_transition.tscn
+res://scenes/props/buildings/sans/sans_exterior.tscn
 res://scenes/entities/dewon.tscn
-res://scenes/props/buildings/sans_shop.tscn
 res://scripts/entities/player.gd
+res://scripts/props/building/enterable_building.gd
+res://scripts/scenes/scene_transition.gd
+res://scenes/props/buildings/sans/sans_interior.tscn
+res://assets/tilesets/terrain.tres
+res://scenes/worlds/dev_world.tscn
+res://scripts/props/building/door.gd
+res://scenes/props/buildings/sans/trash_can.tscn

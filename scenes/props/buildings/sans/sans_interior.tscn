@@ -1,0 +1,173 @@
+[gd_scene load_steps=24 format=3 uid="uid://by5bbllxm8m0w"]
+
+[ext_resource type="PackedScene" uid="uid://bh1su3k042ifa" path="res://scenes/props/buildings/sans/counter.tscn" id="1_7tf12"]
+[ext_resource type="PackedScene" uid="uid://psvsfventekn" path="res://scenes/props/buildings/sans/shelves.tscn" id="1_uhdem"]
+[ext_resource type="Texture2D" uid="uid://bosjnegd3rrv6" path="res://assets/textures/props/buildings/sans/sans_interior.png" id="2_kf5ou"]
+[ext_resource type="PackedScene" uid="uid://dplart6hdr74y" path="res://scenes/props/buildings/sans/baskets.tscn" id="3_60tx2"]
+[ext_resource type="PackedScene" uid="uid://6yct12e4r35u" path="res://scenes/props/buildings/sans/trash_can.tscn" id="4_1u536"]
+[ext_resource type="PackedScene" uid="uid://dmndr1yld65fl" path="res://scenes/entities/dewon.tscn" id="6_r1hqe"]
+[ext_resource type="PackedScene" uid="uid://dhv47gajeqir2" path="res://scenes/scene_transition.tscn" id="7_x46tu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qnq4"]
+size = Vector2(40, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e01mk"]
+size = Vector2(120, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5fp32"]
+size = Vector2(30, 152)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pu80"]
+size = Vector2(250, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gushi"]
+size = Vector2(70, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkrpw"]
+size = Vector2(140, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvud7"]
+size = Vector2(60, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2t7o"]
+size = Vector2(207, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7wcx"]
+size = Vector2(48, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u04fj"]
+size = Vector2(400, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rsay"]
+size = Vector2(24, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lwc7"]
+size = Vector2(24, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jb56"]
+size = Vector2(24, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8b4qs"]
+size = Vector2(24, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3b8q"]
+size = Vector2(9, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avdkc"]
+size = Vector2(40, 30)
+
+[node name="Sans Interior" type="Node2D"]
+
+[node name="Level" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Counter" parent="Level" instance=ExtResource("1_7tf12")]
+position = Vector2(238, 54)
+
+[node name="Shelves" parent="Level" instance=ExtResource("1_uhdem")]
+position = Vector2(47, 111)
+
+[node name="Baskets" parent="Level" instance=ExtResource("3_60tx2")]
+position = Vector2(359, 112)
+
+[node name="Trash Can" parent="Level" instance=ExtResource("4_1u536")]
+position = Vector2(326, 167)
+
+[node name="Dewon" parent="Level" instance=ExtResource("6_r1hqe")]
+position = Vector2(299, 179)
+movement_direction = 0
+
+[node name="Camera" type="Camera2D" parent="Level/Dewon"]
+ignore_rotation = false
+zoom = Vector2(3, 3)
+limit_left = 0
+limit_top = 0
+limit_right = 460
+limit_bottom = 240
+limit_smoothed = true
+rotation_smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="Collision" type="StaticBody2D" parent="Level"]
+
+[node name="Vending Machine" type="CollisionShape2D" parent="Level/Collision"]
+position = Vector2(376, 104.5)
+shape = SubResource("RectangleShape2D_3qnq4")
+
+[node name="Various Props" type="CollisionShape2D" parent="Level/Collision"]
+position = Vector2(180, 104)
+shape = SubResource("RectangleShape2D_e01mk")
+
+[node name="Left Wall" type="CollisionShape2D" parent="Level/Collision"]
+position = Vector2(15, 164)
+shape = SubResource("RectangleShape2D_5fp32")
+
+[node name="Bottom-Left Wall" type="CollisionShape2D" parent="Level/Collision"]
+position = Vector2(155, 220)
+shape = SubResource("RectangleShape2D_2pu80")
+
+[node name="Exit" type="CollisionShape2D" parent="Level/Collision"]
+position = Vector2(301, 250)
+shape = SubResource("RectangleShape2D_gushi")
+
+[node name="Bottom-Right Wall" type="CollisionShape2D" parent="Level/Collision"]
+position = Vector2(390, 220)
+shape = SubResource("RectangleShape2D_rkrpw")
+
+[node name="Right Wall" type="CollisionShape2D" parent="Level/Collision"]
+position = Vector2(430, 100)
+shape = SubResource("RectangleShape2D_kvud7")
+
+[node name="Top-Left Wall" type="CollisionShape2D" parent="Level/Collision"]
+position = Vector2(133.5, 94)
+shape = SubResource("RectangleShape2D_x2t7o")
+
+[node name="Top-Right Wall" type="CollisionShape2D" parent="Level/Collision"]
+position = Vector2(376, 94)
+shape = SubResource("RectangleShape2D_h7wcx")
+
+[node name="Back Wall" type="CollisionShape2D" parent="Level/Collision"]
+position = Vector2(200, 24.5)
+shape = SubResource("RectangleShape2D_u04fj")
+
+[node name="Box" type="CollisionShape2D" parent="Level/Collision"]
+position = Vector2(249, 55)
+shape = SubResource("RectangleShape2D_6rsay")
+
+[node name="Box2" type="CollisionShape2D" parent="Level/Collision"]
+position = Vector2(273, 56.5)
+shape = SubResource("RectangleShape2D_4lwc7")
+
+[node name="Box3" type="CollisionShape2D" parent="Level/Collision"]
+position = Vector2(305, 57.5)
+shape = SubResource("RectangleShape2D_1jb56")
+
+[node name="Box4" type="CollisionShape2D" parent="Level/Collision"]
+position = Vector2(331, 55.5)
+shape = SubResource("RectangleShape2D_8b4qs")
+
+[node name="Box5" type="CollisionShape2D" parent="Level/Collision"]
+position = Vector2(347.5, 56.5)
+shape = SubResource("RectangleShape2D_g3b8q")
+
+[node name="Background" type="Sprite2D" parent="Level"]
+z_index = -2
+texture = ExtResource("2_kf5ou")
+centered = false
+
+[node name="ExitBox" type="Area2D" parent="."]
+
+[node name="ExitArea" type="CollisionShape2D" parent="ExitBox"]
+position = Vector2(300, 225)
+shape = SubResource("RectangleShape2D_avdkc")
+debug_color = Color(0.25098, 1, 0.25098, 0.419608)
+
+[node name="UI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Transition" parent="UI" instance=ExtResource("7_x46tu")]
+offset_left = -1.0
+offset_right = -1.0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="ExitBox" to="." method="_on_exit_box_entered"]

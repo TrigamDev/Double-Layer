@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://6yct12e4r35u"]
+
+[ext_resource type="Texture2D" uid="uid://7jarw0bwef46" path="res://assets/textures/props/buildings/sans/trash_can.png" id="1_l3w3v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rk8bt"]
+size = Vector2(26, 13)
+
+[node name="Trash Can" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(13, 9)
+texture = ExtResource("1_l3w3v")
+centered = false
+offset = Vector2(-13, -9)
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(13, 21.5)
+shape = SubResource("RectangleShape2D_rk8bt")

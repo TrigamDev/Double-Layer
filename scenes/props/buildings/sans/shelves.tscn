@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://psvsfventekn"]
+
+[ext_resource type="Texture2D" uid="uid://c1svcog6ug2qf" path="res://assets/textures/props/buildings/sans/shelves.png" id="1_brbvl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjb73"]
+size = Vector2(166, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t873f"]
+size = Vector2(166, 14)
+
+[node name="Shelves" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(86, 53)
+texture = ExtResource("1_brbvl")
+centered = false
+offset = Vector2(-86, -53)
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(86, 64)
+shape = SubResource("RectangleShape2D_hjb73")
+
+[node name="Collision2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(86, 36)
+shape = SubResource("RectangleShape2D_t873f")

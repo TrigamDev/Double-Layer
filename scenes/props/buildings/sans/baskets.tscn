@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dplart6hdr74y"]
+
+[ext_resource type="Texture2D" uid="uid://dx4d4cxxbt8yg" path="res://assets/textures/props/buildings/sans/baskets.png" id="1_rn77l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1xha"]
+size = Vector2(29, 15.5)
+
+[node name="Baskets" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(14, 71)
+texture = ExtResource("1_rn77l")
+centered = false
+offset = Vector2(-14, -71)
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(14.5, 75.25)
+shape = SubResource("RectangleShape2D_c1xha")
