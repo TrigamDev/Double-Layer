@@ -9,3 +9,6 @@ res://assets/tilesets/terrain.tres
 res://scenes/worlds/dev_world.tscn
 res://scripts/props/building/door.gd
 res://scenes/props/buildings/sans/trash_can.tscn
+res://scripts/util/player_util.gd
+res://scripts/props/building/exitable_building.gd
+res://scripts/config/player_state.gd

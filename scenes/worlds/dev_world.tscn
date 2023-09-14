@@ -13,7 +13,6 @@ y_sort_enabled = true
 y_sort_enabled = true
 
 [node name="Player" parent="Level" instance=ExtResource("1_a2q5a")]
-movement_direction = 1
 
 [node name="Camera" type="Camera2D" parent="Level/Player"]
 ignore_rotation = false

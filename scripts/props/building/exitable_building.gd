@@ -1,13 +1,14 @@
 extends Node2D
 
-@export var player: CharacterBody2D
-@export var interaction_area: Area2D
-@export var outdoors_scene: PackedScene
 @export var transition: ColorRect
 
 var intersect = null
 
-func _on_exit_box_entered(other):
-	if (other == player):
-		print("swap back")
-		transition.transition_to(outdoors_scene)
+func _on_exit_box_entered(_other):
+	var pos = PlayerState.get_last_scene().pos
+	transition.exit(
+		pos.x, pos.y,
+		PlayerState.get_last_scene().facing,
+		PlayerState.get_last_scene().scene
+	)
+	PlayerState.remove_nested()

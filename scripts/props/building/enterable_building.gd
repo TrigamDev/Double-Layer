@@ -9,6 +9,7 @@ func _ready():
 	player.connect("player_interact", _on_player_interact)
 
 func _on_player_interact(collider):
-	print("player interact")
 	if (collider == door):
+		var scene = get_tree().current_scene.scene_file_path
+		PlayerState.add_nested(scene, player.position, player.movement_direction)
 		transition.transition_to(indoorsScene)

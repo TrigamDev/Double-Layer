@@ -1,4 +1,10 @@
-res://assets/tilesets/terrain.tres::6ed903f926cb1aa7e46c95f2f3b513f5::1694390941::res://.godot/exported/133200997/export-5f3039a5732582425da6b0760d94fff2-terrain.res
-res://scenes/entities/dewon.tscn::bcb701f8b6a7486f761c6e92598a534b::1694396205::res://.godot/exported/133200997/export-dc6d1f6473a95d0168cd947cb91502d3-dewon.scn
-res://scenes/props/buildings/sans_shop.tscn::7dcb5688cdb5acb79c15df0561d4bf61::1694396205::res://.godot/exported/133200997/export-c8ae7954cb2da4aa918721e5ecb729b9-sans_shop.scn
-res://scenes/worlds/dev_world.tscn::33e2da78e9bff6d52c31aec911ac8c9a::1694396204::res://.godot/exported/133200997/export-ba9e79df3fa33fb6b94a99d1c91fee3d-dev_world.scn
+res://assets/tilesets/terrain.tres::6ed903f926cb1aa7e46c95f2f3b513f5::1694660116::res://.godot/exported/133200997/export-5f3039a5732582425da6b0760d94fff2-terrain.res
+res://scenes/entities/dewon.tscn::db1e349fdb105fd1040c0f8449d2a524::1694661853::res://.godot/exported/133200997/export-dc6d1f6473a95d0168cd947cb91502d3-dewon.scn
+res://scenes/worlds/dev_world.tscn::4cffe6e125a430969876d2b603cade41::1694662960::res://.godot/exported/133200997/export-ba9e79df3fa33fb6b94a99d1c91fee3d-dev_world.scn
+res://scenes/props/buildings/sans/baskets.tscn::c991ad74be24bae53fd5d75081e2cd63::1694537475::res://.godot/exported/133200997/export-7b21a6bc4487395d83b4e8b0211ca04f-baskets.scn
+res://scenes/props/buildings/sans/counter.tscn::f6e737ce37b9c94775db68f7a94b5fa3::1694539280::res://.godot/exported/133200997/export-9d4a8f68500ccd291a1592893a14441c-counter.scn
+res://scenes/props/buildings/sans/sans_exterior.tscn::cd74ee19b78b09c92c08e3c517949ea1::1694662173::res://.godot/exported/133200997/export-6de2241e8261f2c96e2f2aab8688dbab-sans_exterior.scn
+res://scenes/props/buildings/sans/sans_interior.tscn::c4da872ac97e676cae9674a8cbfdbfc7::1694662960::res://.godot/exported/133200997/export-5ef3579fbe79ac35cd094fa53ab8a77f-sans_interior.scn
+res://scenes/props/buildings/sans/shelves.tscn::355d805c90a1b582a658a1c989a1a913::1694535351::res://.godot/exported/133200997/export-87dc72a0f4bc7c99445f4fab96f6413b-shelves.scn
+res://scenes/props/buildings/sans/trash_can.tscn::8b5ba4a3954368f06dcc2c43c1d77c3d::1694662960::res://.godot/exported/133200997/export-be02009dc466d38eb6955b51f7cb4f32-trash_can.scn
+res://scenes/scene_transition.tscn::849dccff9bdc7e21305758842040d3d7::1694662436::res://.godot/exported/133200997/export-ebd2fb01fff4996529fd3ebfc40fddde-scene_transition.scn

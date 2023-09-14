@@ -1,19 +1,23 @@
 extends CharacterBody2D
 
+# External config
 @export var move_speed = 75
 @export var run_speed = 450
 @export var acceleration = 3500
 @export var interaction_distance = 15
 
-signal player_interact
-
+# States
 @export var movement_direction: PlayerUtil.move_direction = PlayerUtil.move_direction.NONE
 var movement_state: PlayerUtil.move_state = PlayerUtil.move_state.IDLE
+var nested_scenes = []
 
+# Internal vars
 @onready var camera: Camera2D = $Camera
 @onready var interact: RayCast2D = $Interact
+signal player_interact
 
 func _ready():
+	load_state()
 	await get_tree().create_timer(0.1).timeout
 	camera.position_smoothing_enabled = true
 
@@ -22,6 +26,13 @@ func _physics_process(delta):
 	# Detect interaction input
 	if (Input.is_action_just_pressed("interact")):
 		check_interact()
+
+func load_state():
+	if (PlayerState.pos != Vector2.ZERO):
+		position = PlayerState.pos
+		PlayerState.pos = Vector2.ZERO
+	if (PlayerState.facing && movement_direction == PlayerUtil.move_direction.NONE):
+		movement_direction = PlayerState.facing
 
 func calculate_movement(delta):
 	# Get input
@@ -40,6 +51,7 @@ func calculate_movement(delta):
 	if (velocity.length() <= 0): movement_state = PlayerUtil.move_state.IDLE
 	else: movement_state = PlayerUtil.move_state.WALK
 
+# Interact with.. interactables
 func check_interact():
 	if interact.is_colliding():
 		var collider = interact.get_collider()
@@ -68,6 +80,7 @@ func set_idle_anim():
 	elif (movement_direction == PlayerUtil.move_direction.RIGHT): $Sprites.play("idle_right")
 	else: $Sprites.play("idle_down")
 
+# Change interaction target location based on direction
 func set_interact_target():
 	if (movement_direction == PlayerUtil.move_direction.UP):
 		interact.target_position = Vector2(0, -interaction_distance)

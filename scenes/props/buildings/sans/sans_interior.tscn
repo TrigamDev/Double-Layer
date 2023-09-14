@@ -1,6 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://by5bbllxm8m0w"]
+[gd_scene load_steps=25 format=3 uid="uid://by5bbllxm8m0w"]
 
 [ext_resource type="PackedScene" uid="uid://bh1su3k042ifa" path="res://scenes/props/buildings/sans/counter.tscn" id="1_7tf12"]
+[ext_resource type="Script" path="res://scripts/props/building/exitable_building.gd" id="1_sgmml"]
 [ext_resource type="PackedScene" uid="uid://psvsfventekn" path="res://scenes/props/buildings/sans/shelves.tscn" id="1_uhdem"]
 [ext_resource type="Texture2D" uid="uid://bosjnegd3rrv6" path="res://assets/textures/props/buildings/sans/sans_interior.png" id="2_kf5ou"]
 [ext_resource type="PackedScene" uid="uid://dplart6hdr74y" path="res://scenes/props/buildings/sans/baskets.tscn" id="3_60tx2"]
@@ -56,22 +57,12 @@ size = Vector2(9, 15)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_avdkc"]
 size = Vector2(40, 30)
 
-[node name="Sans Interior" type="Node2D"]
+[node name="Sans Interior" type="Node2D" node_paths=PackedStringArray("transition")]
+script = ExtResource("1_sgmml")
+transition = NodePath("UI/Transition")
 
 [node name="Level" type="Node2D" parent="."]
 y_sort_enabled = true
-
-[node name="Counter" parent="Level" instance=ExtResource("1_7tf12")]
-position = Vector2(238, 54)
-
-[node name="Shelves" parent="Level" instance=ExtResource("1_uhdem")]
-position = Vector2(47, 111)
-
-[node name="Baskets" parent="Level" instance=ExtResource("3_60tx2")]
-position = Vector2(359, 112)
-
-[node name="Trash Can" parent="Level" instance=ExtResource("4_1u536")]
-position = Vector2(326, 167)
 
 [node name="Dewon" parent="Level" instance=ExtResource("6_r1hqe")]
 position = Vector2(299, 179)
@@ -87,6 +78,18 @@ limit_bottom = 240
 limit_smoothed = true
 rotation_smoothing_enabled = true
 editor_draw_limits = true
+
+[node name="Counter" parent="Level" instance=ExtResource("1_7tf12")]
+position = Vector2(238, 54)
+
+[node name="Shelves" parent="Level" instance=ExtResource("1_uhdem")]
+position = Vector2(47, 111)
+
+[node name="Baskets" parent="Level" instance=ExtResource("3_60tx2")]
+position = Vector2(359, 112)
+
+[node name="Trash Can" parent="Level" instance=ExtResource("4_1u536")]
+position = Vector2(326, 167)
 
 [node name="Collision" type="StaticBody2D" parent="Level"]
 
@@ -156,6 +159,8 @@ texture = ExtResource("2_kf5ou")
 centered = false
 
 [node name="ExitBox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
 
 [node name="ExitArea" type="CollisionShape2D" parent="ExitBox"]
 position = Vector2(300, 225)
@@ -163,7 +168,6 @@ shape = SubResource("RectangleShape2D_avdkc")
 debug_color = Color(0.25098, 1, 0.25098, 0.419608)
 
 [node name="UI" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Transition" parent="UI" instance=ExtResource("7_x46tu")]
 offset_left = -1.0
